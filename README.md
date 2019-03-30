@@ -28,8 +28,7 @@ To enable the script:
 • open Live's preferences 
 • set the default Launchkey Mini script to control the LK Mini InControl inputs and outputs 
 • set the LaunchkeyMiniMG script to control the LK Mini MIDI inputs and outputs 
-• set track and remote control for the LK Mini MIDI input 
-• set remote control the LK InControl input
+• set track control for the LK Mini MIDI input 
 
 Enjoy! 
 
