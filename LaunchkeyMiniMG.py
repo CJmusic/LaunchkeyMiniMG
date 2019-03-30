@@ -46,20 +46,21 @@ class LaunchkeyMiniMG(ControlSurface):
         transport = TransportComponent()
         mixer.set_track_offset(0)
         
-        volume_knob = SliderElement(MIDI_CC_TYPE, 0, KNOBS[i])
-        pan_knob = SliderElement(MIDI_CC_TYPE, 1, KNOBS[i])
-
-        send_a = SliderElement(MIDI_CC_TYPE, 2, KNOBS[i])
-        send_b = SliderElement(MIDI_CC_TYPE, 3, KNOBS[i])
-        send_c = SliderElement(MIDI_CC_TYPE, 4, KNOBS[i])
-        send_d = SliderElement(MIDI_CC_TYPE, 5, KNOBS[i])
-        send_e = SliderElement(MIDI_CC_TYPE, 6, KNOBS[i])
-        send_f = SliderElement(MIDI_CC_TYPE, 7, KNOBS[i])
 
         for i in xrange(len(KNOBS)): #set the functions of the knobs
-          mixer.channel_strip(i).set_volume_control(volume_knob)
-          mixer.channel_strip(i).set_pan_control(pan_knob)
-          mixer.channel_strip(i).set_send_controls([send_a,
+            volume_knob = SliderElement(MIDI_CC_TYPE, 0, KNOBS[i])
+            pan_knob = SliderElement(MIDI_CC_TYPE, 1, KNOBS[i])
+
+            send_a = SliderElement(MIDI_CC_TYPE, 2, KNOBS[i])
+            send_b = SliderElement(MIDI_CC_TYPE, 3, KNOBS[i])
+            send_c = SliderElement(MIDI_CC_TYPE, 4, KNOBS[i])
+            send_d = SliderElement(MIDI_CC_TYPE, 5, KNOBS[i])
+            send_e = SliderElement(MIDI_CC_TYPE, 6, KNOBS[i])
+            send_f = SliderElement(MIDI_CC_TYPE, 7, KNOBS[i])
+
+            mixer.channel_strip(i).set_volume_control(volume_knob)
+            mixer.channel_strip(i).set_pan_control(pan_knob)
+            mixer.channel_strip(i).set_send_controls([send_a,
                                                     send_b,
                                                     send_c, 
                                                     send_d,
